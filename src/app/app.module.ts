@@ -1,24 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-
-// third-party
+import { HelloComponent } from './hello.component';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    AnimateOnScrollModule.forRoot()
-  ],
-  providers: [ ],
-  bootstrap: [AppComponent]
+  imports:      [ BrowserModule, FormsModule, AnimateOnScrollModule.forRoot() ],
+  declarations: [ AppComponent, HelloComponent ],
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
